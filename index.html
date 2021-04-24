@@ -42,6 +42,33 @@
       </nav>
 
       <main>
+        <div class="main-header">
+          <h2 class="headline">Dashboard</h2>
+          <div class="main-header-search">
+            <input type="search" placeholder="Search...">
+          </div>
+        </div>
+
+        <div class="alert" id="alert">
+            <!-- JS will insert alert here -->
+        </div>
+
+        <section class="traffic">
+          <div class="traffic-header">
+            <h3>Traffic</h3>
+            <ul class="traffic-nav">
+              <li class="traffic-nav-link">Hourly</li>
+              <li class="traffic-nav-link">Daily</li>
+              <li class="traffic-nav-link">Weekly</li>
+              <li class="traffic-nav-link">Monthly</li>
+            </ul>
+          </div>
+          <div class="widget-container-full">
+            <!-- element line graph will attach here --> 
+            <canvas id="traffic-chart"></canvas>
+          </div>
+
+        </section>
 
       </main>
 
