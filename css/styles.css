@@ -144,6 +144,30 @@ h1 {
     padding: 10px 0px;
 }
 
+/* alert banner */
+
+.alert {
+    width: 95vw;
+    margin: auto;
+    display: inline;
+    color: #fff;
+    background-color: #6769a6;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.alert p {
+    display: inline-block;
+}
+
+.alert-banner-close {
+    padding-left: 40px;
+}
+
+.alert-banner-close:hover {
+    cursor: pointer;
+}
+
 /* main header styles */
 
 .widget-container-full,
