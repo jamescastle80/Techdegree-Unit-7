@@ -32,6 +32,10 @@ img {
     grid-area: main;
 }
 
+.main {
+    display: grid;
+}
+
 h1,
 h2,
 h3,
@@ -72,39 +76,58 @@ a {
     justify-content: space-between;
     background-color: #6769a6;
     height: 80px;
+    padding: 15px 5px 15px 5px;
 }
 
 h1 {
     font-size: 25px;
     color: #fff;
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .bell {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 60px;
     fill: #fff;
-    padding: 20px;
-    border-right: 1px solid #ebebed;
+    padding: 10px 20px 10px 20px;
 }
 
 .user {
     display: flex;
     width: 45%;
+    border-left: 1px solid #ededed;
 }
 
 .user img {
     border-radius: 50%;
-    padding: 15px;
+    padding: 0px 15px;
 }
 
 .user h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: lighter;
     color: #fff;
-    padding: 20px;
+    text-transform: capitalize;
+}
 
+/* bell animation */
+
+@keyframes ring {
+    20% {
+        transform: rotate(25deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(-30deg) scale(1.2);
+    }
+    80% {
+        transform: rotate(15deg) scale(1.1);
+    }
+}
+
+.bell:hover {
+    animation: ring .5s ease-in-out forwards;
 }
 
 /* navigation styles */
@@ -123,8 +146,9 @@ h1 {
 
 /* main header styles */
 
-.main {
-    width: 90%;
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
     margin: auto;
 }
 
@@ -260,7 +284,7 @@ button {
 
 /* media queries */
 
-@media (min-width: 768) {
+@media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
@@ -268,10 +292,43 @@ button {
             "navigation main";
     }
 
+    .navi {
+        display: block;
+        padding: 10px;
+    }
+
+    .navi img {
+        padding-bottom: 25px;
+    }
+
     .main {
         grid-template-columns: 50%;
     }
 
+    .traffic,
+    .social {
+        grid-column: 1 / span 2;
+    }
+
+    .daily,
+    .members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .activity,
+    .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half{
+        width: 45vw;
+    }
 }
 
 
