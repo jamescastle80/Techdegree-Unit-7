@@ -1,6 +1,18 @@
 // alert banner
 
 const alertBanner = document.getElementById("alert");
+const bell = document.getElementById("bell");
+let greenDot = document.createElement('img');
+
+
+function alertDot() {
+    greenDot.className = 'green-dot';
+     if (alertBanner.style.display !== "none") {
+        bell.appendChild(greenDot);
+     }
+}
+
+alertDot();
 
 alertBanner.innerHTML = 
     `
@@ -14,6 +26,7 @@ alertBanner.innerHTML =
         const element = e.target;
         if (element.classList.contains("alert-banner-close")) {
             alertBanner.style.display = "none";
+            bell.removeChild(greenDot);
         }
     });
 
@@ -132,6 +145,8 @@ let mobileChart = new Chart(mobileCanvas, {
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
+
+
 
 send.addEventListener('click', () => {
     if (user.value === "" && message.value === "" ) {
