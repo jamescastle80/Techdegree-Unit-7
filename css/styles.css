@@ -40,6 +40,7 @@ h2,
 h3,
 h4,
 p,
+li,
 button,
 span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -257,15 +258,16 @@ h1 {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ebebed;
-    min-height: 230px;
+    min-height: 180px;
 }
 
 .member-container p {
     margin: 5px auto;
-    width: 80%;
 }
 
 .member-container img {
+    height: 90px;
+    width: 90px;
     display: block;
     margin: auto;
     border-radius: 50%;
@@ -295,7 +297,7 @@ textarea,
 }
 
 textarea {
-    height: 150px;
+    height: 152px;
 }
 
 .button-primary {
@@ -337,6 +339,7 @@ button {
     height: 80px;
     display: block;
     position: relative;
+    padding-top: 20px;
 }
 
 
@@ -345,7 +348,7 @@ button {
     top: 10px;
     right: 10px;
     display: block;
-    width: 60px;
+    width: 100px;
     height: 34px;
   }
 
@@ -357,6 +360,7 @@ button {
   }
   
   /* The slider */
+
   .slider {
     position: absolute;
     cursor: pointer;
@@ -390,9 +394,9 @@ button {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
   }
   
   /* Rounded sliders */
@@ -432,6 +436,16 @@ button {
         grid-template-columns: 50% 50%;
     }
 
+    .traffic-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .traffic-nav {
+        width: 40%;
+        margin: 25px 0px 5px 0px;
+    }
+
     .traffic,
     .main-header,
     .socials,
@@ -457,8 +471,14 @@ button {
         grid-column: 1 / span 1;
     }
 
+    .bar {
+        border-right: 1px solid #ebebed;
+        margin-right: 0px;
+    }
+
     .pie {
-        grid-column: 2 / span 1;;
+        grid-column: 2 / span 1;
+        margin-left: 0px;
     }
 
     .mobile,
@@ -481,6 +501,7 @@ button {
     .member-container {
         display: flex;
         flex-direction: row;
+        align-items: center;
         text-align: left;
         padding: 10px;
         border-bottom: 1px solid #ebebed;
@@ -492,15 +513,18 @@ button {
     }
     
     .member-container p {
-        display: flex;
-        margin: auto;
+        margin: 0px;
         text-align: left;
     }
     
     .member-container img {
-        display: flex;
+ 
         margin: 20px;
         border-radius: 50%;
+    }
+
+    .toggle-box {
+        width: 50%;
     }
 }
 
@@ -517,4 +541,19 @@ button {
         grid-column: 2 / span 1;
     }
 
+    .new-members,
+    .message {
+        border-right: 1px solid #ebebed;
+    }
+
+    .message {
+        border-bottom: 0px;
+        padding-right: 10px;
+    }
+
+    .toggle-box {
+        width: 100%;
+    }
+
 }
+

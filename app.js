@@ -149,11 +149,11 @@ const send = document.getElementById("send");
 
 
 send.addEventListener('click', () => {
-    if (user.value === "" && message.value === "" ) {
+    if (user.textContent === "" && message.textContent === "" ) {
         alert("Please fill out user and message fields before sending");
-    } else if (user.value === "" ) {
+    } else if (user.textContent === "" ) {
         alert("Please fill out user field before sending");
-    } else if (message.value === "" ) {
+    } else if (message.textContent === "" ) {
         alert("Please fill out message field before sending");
     } else {
         alert(`Message succesfully sent to: ${user.value}`);
