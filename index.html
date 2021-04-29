@@ -47,6 +47,20 @@
           </div>
         </div>
 
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="not-banner">
+              <span class="close">&times;</span>
+              <h3>Notifications</h3>
+            </div>
+            <ol>
+              <li>You have 3 new messages</li>
+              <li>Philip Charlton liked your post</li>
+              <li>Garry Maddison like your post</li>
+            </ol>
+          </div>
+        </div>
+
         <div class="alert" id="alert">
             <!-- JS will insert alert here -->
         </div>
@@ -54,11 +68,11 @@
         <section class="traffic">
           <div class="traffic-header">
             <h3>Traffic</h3>
-            <ul class="traffic-nav">
-              <li class="traffic-nav-link">Hourly</li>
-              <li class="traffic-nav-link">Daily</li>
-              <li class="traffic-nav-link">Weekly</li>
-              <li class="traffic-nav-link">Monthly</li>
+            <ul class="traffic-nav" id="trafficNav">
+              <li class="traffic-nav-link" id="hourly">Hourly</li>
+              <li class="traffic-nav-link" id="daily">Daily</li>
+              <li class="traffic-nav-link" id="weekly">Weekly</li>
+              <li class="traffic-nav-link highlight" id="monthly">Monthly</li>
             </ul>
           </div>
           <div class="widget-container-full">
@@ -172,6 +186,7 @@
               <p>Victoria Chambers comment on <b>WebApp's SEO Tips</b></p>
               <p>4 hours ago</p>
             </div>
+            <p class="arrow">&gt;</p>
           </div>
 
           <div class="member-container">
@@ -180,6 +195,7 @@
               <p>Dale Byrd like the post <b>Facebook's Changes for 2021</b></p>
               <p>5 hours ago</p>
             </div>
+            <p class="arrow">&gt;</p>
           </div>
 
           <div class="member-container">
@@ -188,6 +204,7 @@
               <p>Dawn Wood commented on <b>Facebook's Changes for 2021</b></p>
               <p>5 hours ago</p>
             </div>
+            <p class="arrow">&gt;</p>
           </div>
 
           <div class="member-container">
@@ -196,6 +213,7 @@
               <p>Dan Oliver posted <b>WebApp's SEO Tips</b></p>
               <p>1 day ago</p>
             </div>
+            <p class="arrow">&gt;</p>
           </div>
         </section>
 
@@ -213,7 +231,7 @@
 
       <!-- custom toggle -->
       <div class="toggle-box">
-        <span class="toggle-span">Send Email Notifications</span>
+        <legend class="toggle-span">Send Email Notifications</legend>
         <label for="checkbox1" class="toggle">
           <input type="checkbox" id="checkbox1">
           <span class="slider round"></span>
@@ -221,7 +239,7 @@
       </div>
 
       <div class="toggle-box">
-        <span>Set Profile to Public</span>
+        <legend class="toggle-span">Set Profile to Public</legend>
         <label for="checkbox2" class="toggle">
           <input type="checkbox" id="checkbox2">
           <span class="slider round"></span>
@@ -248,5 +266,7 @@
       
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="line.js"></script>
+    <script type="text/javascript" src="complete.js"></script>
   </body>
 </html>
