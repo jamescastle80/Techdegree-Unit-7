@@ -359,8 +359,12 @@ button {
      display: block;
      position: absolute;
      width: 80%;
-     background-color: rgba(0,0,0,0.7);
+     background-color: rgba(0,0,0,0.8);
      z-index: 1;
+ }
+
+ .hide {
+     display: none;
  }
 
  .names-container {
