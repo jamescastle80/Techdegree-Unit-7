@@ -80,15 +80,15 @@ let timezone = document.getElementById("timezone");
 // Store Values
 
 function saveOne() {
-    localStorage.setItem("checkbox", checkbox.checked);
+    localStorage.setItem("checkbox1", checkboxOne.checked);
 }
 
 function saveTwo() {
-    localStorage.setItem("checkbox", JSON.parse(checkbox.checked));
+    localStorage.setItem("checkbox2", checkboxTwo.checked);
 }
 
 function saveZone() {
-    localStorage.setItem("timezone, timezone.selectedIndex");
+    localStorage.setItem("timezone", timezone.selectedIndex);
 }
 
 // listen for click save
@@ -105,6 +105,19 @@ settings.addEventListener('click', e => {
 
 // on page load
 
+function returnSettings() {
+    let checkOne = JSON.parse(localStorage.getItem("checkbox1"));
+    let checkTwo = JSON.parse(localStorage.getItem("checkbox2"));
+    let checkTime = JSON.parse(localStorage.getItem("timezone"));
+    if (checkOne) {
+        checkboxOne.checked = checkOne;
+    } if (checkTwo) {
+        checkboxTwo.checked = checkTwo;
+    } if (checkTime) {
+        timezone.selectedIndex = checkTime;
+    }
+}
 
+returnSettings();
 
 
