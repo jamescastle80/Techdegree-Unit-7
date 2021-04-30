@@ -72,3 +72,39 @@ send.addEventListener('click', () => {
     }
 });
 
+let settings = document.getElementById("settings");
+let checkboxOne = document.getElementById("checkbox1");
+let checkboxTwo = document.getElementById("checkbox2");
+let timezone = document.getElementById("timezone");
+
+// Store Values
+
+function saveOne() {
+    localStorage.setItem("checkbox", checkbox.checked);
+}
+
+function saveTwo() {
+    localStorage.setItem("checkbox", JSON.parse(checkbox.checked));
+}
+
+function saveZone() {
+    localStorage.setItem("timezone, timezone.selectedIndex");
+}
+
+// listen for click save
+
+settings.addEventListener('click', e => {
+    if (e.target.id === "save") {
+        saveOne();
+        saveTwo();
+        saveZone();
+    } else if (e.target.id === "cancel") {
+        localStorage.clear();
+    }
+});
+
+// on page load
+
+
+
+
