@@ -1,0 +1,157 @@
+/* media queries */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+            "header header"
+            "navigation main";
+    }
+
+    section {
+        width: 95%;
+    }
+
+    .navi {
+        display: block;
+        padding: 10px;
+    }
+
+    .navi img {
+        padding-bottom: 25px;
+    }
+
+    .main {
+        grid-template-columns: 50% 50%;
+    }
+
+    .traffic-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .traffic-nav {
+        width: 40%;
+        margin: 25px 0px 5px 0px;
+    }
+
+    .traffic,
+    .main-header,
+    .socials,
+    .alert,
+    .new-members,
+    .recent-activity,
+    .message,
+    .settings {
+        grid-column: 1 / span 2;
+    }
+
+    .social-widgets {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-container {
+        width: 33%;
+    }
+
+    .bar,
+    .members {
+        grid-column: 1 / span 1;
+    }
+
+    .bar {
+        border-right: 1px solid #ebebed;
+        margin-right: 0px;
+    }
+
+    .pie {
+        grid-column: 2 / span 1;
+        margin-left: 0px;
+    }
+
+    .mobile,
+    .activity {
+        grid-column: 2 / span 1;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half{
+        width: 43vw;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    .member-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ebebed;
+        min-height: auto;
+    }
+
+    .member-text {
+        width: 70%;
+    }
+
+    .member-comment {
+        width: 75%
+    }
+
+    .arrow {
+        display: inline;
+        color: #6769a6;
+        font-size: 20px;
+    }
+    
+    .member-container p {
+        margin: 0px;
+        text-align: left;
+    }
+    
+    .member-container img {
+ 
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .toggle-box {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+   
+
+    .new-members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .recent-activity,
+    .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .new-members,
+    .message {
+        border-right: 1px solid #ebebed;
+    }
+
+    .message {
+        border-bottom: 0px;
+        padding-right: 10px;
+    }
+
+    .toggle-box {
+        width: 100%;
+    }
+
+}
