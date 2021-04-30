@@ -56,7 +56,7 @@ function filterNames(event) {
 
  nameLI.addEventListener('click', (e) => {
     console.log(e.target.textContent);
-    nameInput.textContent = e.target.textContent;
+    nameInput.value = e.target.textContent;
  });
 
 

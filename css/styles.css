@@ -358,7 +358,8 @@ button {
  .dropdown-box {
      display: block;
      position: absolute;
-     background-color: rgba(0,0,0,0.8);
+     width: 80%;
+     background-color: rgba(0,0,0,0.7);
      z-index: 1;
  }
 
@@ -367,7 +368,7 @@ button {
  }
  
  .names-container li {
-    margin-top: 0px;
+   
     list-style: none;
     color: #fff;
     padding: 15px 15px;
@@ -375,7 +376,7 @@ button {
     display: block;
  }
 
- .form-field:focus .dropdown-box {
+ .user-field:focus .dropdown-box {
      display: block;
  }
 
