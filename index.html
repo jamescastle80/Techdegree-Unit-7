@@ -220,7 +220,13 @@
       <section class="message" id="message">
         <h3>Message User</h3>
         <form class="widget-container">
-          <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          <div class="dropdown">
+            <input type="text" onkeyup="filterNames(event)" placeholder="Search for User" class="form-field" id="userField">
+            <div class="dropdown-box">
+              <ul class="names-container" id ="names-container">
+              </ul>
+            </div>
+          </div>
           <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>

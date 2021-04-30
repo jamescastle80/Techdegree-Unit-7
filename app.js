@@ -56,8 +56,9 @@ window.onclick = function(event) {
 const userField = document.getElementById("userField");
 const messageField = document.getElementById("messageField");
 const send = document.getElementById("send");
-
-
+const timeZone = document.getElementById("timezone");
+const togOne = document.getElementById("checkbox1");
+const togtwo = document.getElementById("checkbox2");
 
 send.addEventListener('click', () => {
     if (userField.value === "" && messageField.value === "" ) {
@@ -70,3 +71,4 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${userField.value}`);
     }
 });
+
