@@ -51,7 +51,7 @@ window.onclick = function(event) {
   }
 } 
 
-// form
+// message form
 
 const userField = document.getElementById("userField");
 const messageField = document.getElementById("messageField");
@@ -72,6 +72,9 @@ send.addEventListener('click', () => {
     }
 });
 
+
+// Local Storage for settings
+
 let settings = document.getElementById("settings");
 let checkboxOne = document.getElementById("checkbox1");
 let checkboxTwo = document.getElementById("checkbox2");
@@ -79,15 +82,9 @@ let timezone = document.getElementById("timezone");
 
 // Store Values
 
-function saveOne() {
+function saveSettings() {
     localStorage.setItem("checkbox1", checkboxOne.checked);
-}
-
-function saveTwo() {
     localStorage.setItem("checkbox2", checkboxTwo.checked);
-}
-
-function saveZone() {
     localStorage.setItem("timezone", timezone.selectedIndex);
 }
 
@@ -95,9 +92,7 @@ function saveZone() {
 
 settings.addEventListener('click', e => {
     if (e.target.id === "save") {
-        saveOne();
-        saveTwo();
-        saveZone();
+        saveSettings();
     } else if (e.target.id === "cancel") {
         localStorage.clear();
     }

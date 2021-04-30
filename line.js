@@ -96,6 +96,7 @@ day.addEventListener('click', () => {
     trafficChart.data = trafficDataDay;
         trafficChart.update();
     });
+
 week.addEventListener('click', () => {
     removeClass();
     week.classList.add('highlight');
@@ -125,6 +126,7 @@ const dailyData = {
 };
 
 const dailyOptions = {
+    aspectRatio: 1.4,
     scales: {
         y: {
             beginAtZero: true
