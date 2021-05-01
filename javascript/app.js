@@ -94,7 +94,9 @@ settings.addEventListener('click', e => {
     if (e.target.id === "save") {
         saveSettings();
     } else if (e.target.id === "cancel") {
-        localStorage.clear();
+        checkboxOne.checked = false;
+        checkboxTwo.checked = false;
+        timezone.selectedIndex = [0];
     }
 });
 
