@@ -56,7 +56,7 @@ function filterNames(event) {
         return(v.name.includes(searchvalue));
     })
     createNames(filterNames);
-    if (nameLI.childElementCount == 10) {
+    if (nameLI.childElementCount > 9) {
         box.classList.add('hide');
     }
  }
